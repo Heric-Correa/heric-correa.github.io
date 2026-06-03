@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio | PhD</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --text-color: #333333;
+            --bg-color: #ffffff;
+            --secondary-bg: #f9f9f9;
+            --accent-color: #0056b3; 
+            --border-color: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: var(--bg-color);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover { color: #003d82; text-decoration: underline; }
+
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; background-color: var(--bg-color);
+            position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-logo {
+            font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600;
+            color: var(--primary-color); text-decoration: none;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--text-color); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--accent-color); text-decoration: none; }
+
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 5%; }
+        
+        .hero { text-align: center; padding: 4rem 0 3rem; }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; color: #666; letter-spacing: 1px; }
+
+        section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-color); }
+        section:last-of-type { border-bottom: none; }
+        section h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+
+        .about-grid { display: grid; grid-template-columns: 2.5fr 1fr; gap: 3rem; align-items: start; }
+        .about-text p { margin-bottom: 1.2rem; }
+        .profile-pic img { width: 100%; max-width: 250px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+        .btn-group { margin-top: 2rem; display: flex; gap: 1rem; }
+        .btn { display: inline-block; padding: 0.6rem 1.5rem; background-color: var(--primary-color); color: #fff; border-radius: 4px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s ease; }
+        .btn:hover { background-color: var(--accent-color); color: #fff; text-decoration: none; }
+        .btn-outline { background-color: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); }
+        .btn-outline:hover { background-color: var(--primary-color); color: #fff; }
+
+        ul.custom-list { list-style-type: square; padding-left: 1.2rem; margin-bottom: 1.2rem; }
+        ul.custom-list li { margin-bottom: 0.5rem; }
+
+        footer { text-align: center; padding: 2rem; background-color: var(--secondary-bg); font-size: 0.9rem; color: #777; border-top: 1px solid var(--border-color); }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .profile-pic { order: -1; text-align: center; }
+            .profile-pic img { margin: 0 auto; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo">Dr. Jane Doe</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#outreach">Outreach</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <header class="hero">
+            <h1>Jane Doe</h1>
+            <p class="subtitle">Dynamical Systems • Geometry & Topology • Ergodic Theory</p>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a mathematician with broad interests in Dynamical Systems, Low-dimensional Topology and Geometry, and Ergodic Theory.</p>
+                    <p>I currently hold a position as a Postdoctoral Researcher. I earned my PhD in 2024.</p>
+                    <div class="btn-group">
+                        <a href="assets/cv.pdf" class="btn" target="_blank">Download CV</a>
+                        <a href="assets/thesis.pdf" class="btn btn-outline" target="_blank">PhD Thesis</a>
+                    </div>
+                </div>
+                <div class="profile-pic">
+                    <img src="assets/profile.jpg" alt="Profile Photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <p>Selected publications and preprints:</p>
+            <ul class="custom-list">
+                <li>
+                    <strong>"On the Topology of Dynamical Systems"</strong> <br>
+                    Jane Doe, John Smith. <em>Journal of Advanced Mathematics</em>, 2025. 
+                    [<a href="#">arXiv</a>] [<a href="#">PDF</a>]
+                </li>
+            </ul>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+            <p>Below is a directory of my current and past courses. Course materials, syllabi, and problem sets can be found on their respective pages.</p>
+            <ul class="custom-list">
+                <li>
+                    <strong>Calculus I</strong> - Spring 2026<br>
+                    <a href="courses/calculus-i.html">Course Webpage</a> | 
+                    <a href="https://drive.google.com/drive/folders/YOUR_DRIVE_LINK_HERE" target="_blank">Google Drive (Syllabus & Materials)</a>
+                </li>
+                <br>
+                <li>
+                    <strong>Linear Algebra</strong> - Fall 2025<br>
+                    <a href="courses/linear-algebra.html">Course Webpage</a> | 
+                    <a href="https://drive.google.com/drive/folders/YOUR_DRIVE_LINK_HERE" target="_blank">Google Drive (Archived Notes)</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="outreach">
+            <h2>Outreach</h2>
+            <ul class="custom-list">
+                <li>Founding member of "Math for Everyone" workshops.</li>
+                <li>Speaker at the 2025 High School Math Olympiad.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                <strong>Email:</strong> <a href="mailto:jane.doe@university.edu">jane.doe@university.edu</a><br>
+                <strong>Office:</strong> Room 404, Mathematics Building<br>
+                <strong>Links:</strong> <a href="#">Google Scholar</a> | <a href="#">GitHub</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jane Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
