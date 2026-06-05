@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus I | Dr. Jane Doe</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+    :root {
+    --primary-color: #1a1a1a;
+    --text-color: #333333;
+    --bg-color: #fdf6e3; /* Updated to old paper tone */
+    --secondary-bg: #f5ecd5; /* A slightly darker shade for contrast boxes */
+    --accent-color: #0056b3;
+    --border-color: #e0e0e0;
+}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-color); line-height: 1.7; background-color: var(--bg-color); }
+        h1, h2, h3 { font-family: 'Lora', serif; color: var(--primary-color); font-weight: 600; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { color: #003d82; text-decoration: underline; }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%; background-color: var(--bg-color); border-bottom: 1px solid var(--border-color); }
+        .nav-logo { font-family: 'Lora', serif; font-size: 1.25rem; font-weight: 600; color: var(--primary-color); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: var(--text-color); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; }
+        .nav-links a:hover { color: var(--accent-color); text-decoration: none; }
+        
+        .container { max-width: 850px; margin: 0 auto; padding: 3rem 5%; min-height: 70vh; }
+        .course-header { padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); margin-bottom: 2rem; }
+        .course-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .course-header .meta { color: #666; font-size: 1.1rem; }
+        
+        .materials-list { list-style: none; margin-top: 1.5rem; }
+        .materials-list li { margin-bottom: 1rem; padding: 1rem; background-color: var(--secondary-bg); border-radius: 6px; border-left: 4px solid var(--accent-color); }
+        .materials-list strong { display: block; font-size: 1.1rem; color: var(--primary-color); }
+        
+        footer { text-align: center; padding: 2rem; background-color: var(--secondary-bg); font-size: 0.9rem; color: #777; border-top: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html" class="nav-logo">Dr. Jane Doe</a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#research">Research</a></li>
+            <li><a href="../index.html#teaching">Teaching</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <header class="course-header">
+            <h1>Calculus I</h1>
+            <p class="meta">Spring 2026 | Room 101, Mathematics Building</p>
+        </header>
+
+        <section>
+            <h2>Course Description</h2>
+            <p>This course introduces the fundamental concepts of differential and integral calculus. Topics include limits, continuity, derivatives, applications of derivatives, and an introduction to integration.</p>
+            
+            <h2 style="margin-top: 2rem;">Materials & Resources</h2>
+            <p>All lecture notes, assignments, and the syllabus are hosted on Google Drive.</p>
+            
+            <ul class="materials-list">
+                <li>
+                    <strong>Syllabus</strong>
+                    <a href="https://drive.google.com/file/d/YOUR_SYLLABUS_LINK/view" target="_blank">View PDF on Google Drive</a>
+                </li>
+                <li>
+                    <strong>Lecture Notes Folder</strong>
+                    <a href="https://drive.google.com/drive/folders/YOUR_NOTES_FOLDER_LINK" target="_blank">Access Folder on Google Drive</a>
+                </li>
+                <li>
+                    <strong>Problem Sets & Solutions</strong>
+                    <a href="https://drive.google.com/drive/folders/YOUR_PROBLEM_SETS_LINK" target="_blank">Access Folder on Google Drive</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Jane Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
