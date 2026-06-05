@@ -96,11 +96,71 @@
             .profile-pic img { margin: 0 auto; }
             .hero h1 { font-size: 2.2rem; }
         }
+
+.menu-toggle {
+    display: none; /* Hidden on desktop computers */
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block; /* Shows the ☰ button on mobile screens */
+    }
+
+    .nav-links {
+        display: none; /* Hides the link list by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-bg); /* Matches your paper background style */
+        position: absolute;
+        top: 100%; /* Drops the menu right underneath the header row */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.8rem 0;
+    }
+
+    /* Displays the menu when activated via JavaScript */
+    .nav-links.active {
+        display: flex;
+    }
+}
     </style>
 </head>
 <body>
 
-    <nav>
+    <nav class="navbar">
+    <div class="logo"><a href="#">Heric Corrêa</a></div>
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        ☰
+    </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#research" onclick="toggleMenu()">Research</a></li>
+        <li><a href="#ensino" onclick="toggleMenu()">Ensino</a></li>
+        <li><a href="#Conferences" onclick="toggleMenu()">Conferences etc</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </ul>
+</nav>
+    
+  <!--  <nav>
         <a href="#" class="nav-logo">Heric Corrêa</a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
@@ -109,7 +169,7 @@
             <li><a href="#Conferences etc">Conferences etc</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </nav>
+    </nav> -->
 
     <main class="container">
         
@@ -213,5 +273,13 @@
             });
         });
     </script>
+        <script>
+    function toggleMenu() {
+        if (window.innerWidth <= 768) {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    }
+</script>
 </body>
 </html>
